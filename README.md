@@ -1,4 +1,4 @@
-# nonleading_spectral
+# nonleading-spectral
 
 This is a code repository for our paper on a modified spectral method to reduce dynamical systems on networks into a one-dimensional dynamics. When you use the code, please cite the following paper:
 
