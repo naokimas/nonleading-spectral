@@ -1,3 +1,8 @@
+<script
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  type="text/javascript">
+</script>
+
 # nonleading-spectral
 
 This is a code repository for our paper on a modified spectral method to reduce dynamical systems on networks into a one-dimensional dynamics. When you use the code, please cite the following paper:
