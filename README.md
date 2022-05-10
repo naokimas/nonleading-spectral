@@ -19,6 +19,6 @@ Panel (a), (b) and (e) of Figures 3, 4 and 5 can be generated using run_fig345_a
 Panel (c) and (d) will be generated using run_fig345_c_d.m. While running the codes run_fig345_a_b_e.m or run_fig345_c_d.m the function files (SIS1.m, SIS1DPRX.m double_well1.m double_well1DPRX.m, GLV1.m, GLV1DPRX.m and edgeL2adj.m) should be placed in the same folder.
 
 
-Figure 6
+Figure 6 is obvious from the eigenvectors obtained from stat-modified-spectral-method.py. So, we omit the code just for plotting.
 
 Figure 7 can be generated using run_fig7.m.
