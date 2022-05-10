@@ -5,7 +5,7 @@
 t0 = 0; % the start time 
 tf = 200; % the end time 
 x_low = .01;%0.0001;
-load E109.txt -ascii %%edhe list of the network
+load E109.txt -ascii %%edge list of the network
 load a109.txt -ascii % eigen vector of the network
 
   edgelist=E109;
