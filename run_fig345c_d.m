@@ -1,5 +1,5 @@
 
- global K A
+ global K A c
 
 t0 = 0; % the start time 
 tf = 500; % the end time 
@@ -28,7 +28,8 @@ betaprxN1=parameters(2);
 e_val_max=parameters(7);
 alphaprxN1=parameters(8);
 alphaprxN2=parameters(9);
-
+c=e_val_max+1; %%%for GLV model only. else set to zero.
+   
     
     A=edgeL2adj(edgelist); %%%% Converting edgelist to a adjacency matrix
     
@@ -40,7 +41,7 @@ x0l = ones(n,1)*x_low;  % Initial conditions
 %x0h = ones(n,1)*x_hi;
 options = [];
 %data_gao=[];
-data_laurence=[];
+data_l=[];
 %[e_vec, e_val]=eig(A);
 deg1=sum(A);
 betaprx=beta_maxev; %% beta for maximum eigen value
@@ -58,12 +59,12 @@ R_low_n2=sum(ev(:,3).*xl_ss'); %%Calculating  R using eigen vector corresponding
 [t,xll1]=ode45(@SIS1DPRX,[0,200],x_low,options,betaprx,alphaprx); %% solving One dimensionl model corresponding to largest eigen value and corresponding beta
 [t,xlN1]=ode45(@SIS1DPRX,[0,200],x_low,options,1,alphaprx);%% solving One dimensionl model corresponding to largest eigen value and  beta=1
 [t,xlN2]=ode45(@SIS1DPRX,[0,200],x_low,options,1,alphaprxN2);  %% solving One dimensionl model corresponding to optimal eigen value and beta=1
-%data_laurence=[data_laurence;D R_low_prx R_hi_prx xll1(end) xhl1(end) R_low_naoki1 R_hi_naoki1 R_low_naoki2 R_hi_naoki2];
-data_laurence=[data_laurence;K xl_nn alphaprx R_low_prx xll1(end) alphaprxN1 R_low_prx xlN1(end) alphaprxN2 R_low_n2 xlN2(end) ];
+
+data_l=[data_l;K xl_nn alphaprx R_low_prx xll1(end) alphaprxN1 R_low_prx xlN1(end) alphaprxN2 R_low_n2 xlN2(end) ];
 
 end
-    %save datadouble_wellA3E6.mat data_gao data_laurence
-    network_data=[network_data;i*ones(length(data_laurence(:,1)),1),data_laurence];
+   
+    network_data=[network_data;i*ones(length(data_l(:,1)),1),data_l];
 end
 %save network_Double_well162datak4.mat network_data
 
