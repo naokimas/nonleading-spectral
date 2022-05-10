@@ -14,7 +14,7 @@ For Figures 3-7, the networks, leading eigenvector, minimizer of $$\epsilon_1$$,
 
 Then, the (stochastic) dynamical systems are simulated with MATLAB code as follows.
 
-Panel (a), (b) and (e) of Figures 3, 4 and 5 can be generated using Figure3_a_b_e.m
+Panel (a), (b) and (e) of Figures 3, 4 and 5 can be generated using run_fig345_a_b_e.m
 
 Figure 4
 
