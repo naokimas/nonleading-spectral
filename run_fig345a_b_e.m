@@ -1,5 +1,5 @@
 
- global K A
+ global K A c
 %%K is the coupling strength
 % A is the network adjacency matrix
 t0 = 0; % the start time 
@@ -27,7 +27,7 @@ alphaprxN2=parameters(9);
 
 %ev=eig_vecs_corrected_netscience_lcc;
    ev=a109;
-
+c=e_val_max+1; %%for GLV model, else set to zero
 
 n = length(A); % number of nodes in the network
 x0l = ones(n,1)*x_low;  % Initial conditions
